@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated LC -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="myDsl.presentation.MyDslModelWizardID"
+            name="%_UI_MyDslModelWizard_label"
+            class="myDsl.presentation.MyDslModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/MyDslModelFile.gif">
+         <description>%_UI_MyDslModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated LC -->
+      <editor
+            id="myDsl.presentation.MyDslEditorID"
+            name="%_UI_MyDslEditor_label"
+            icon="icons/full/obj16/MyDslModelFile.gif"
+            extensions="mydsl"
+            class="myDsl.presentation.MyDslEditor"
+            contributorClass="myDsl.presentation.MyDslActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

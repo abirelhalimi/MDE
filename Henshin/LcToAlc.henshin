@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_gKz6EBngEeqF_IlBLfqCaw">
+  <imports href="../DC/model/dC.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_lV3psBngEeqF_IlBLfqCaw" name="Merge">
+    <lhs xmi:id="_lWn3oBngEeqF_IlBLfqCaw" name="Lhs">
+      <nodes xmi:id="_rGhZsBngEeqF_IlBLfqCaw" outgoing="_u2jq4BniEeqF_IlBLfqCaw _x5zZcBniEeqF_IlBLfqCaw">
+        <type href="../DC/model/dC.ecore#//StateMachine"/>
+      </nodes>
+      <nodes xmi:id="_yZ3EcBngEeqF_IlBLfqCaw">
+        <type href="../DC/model/dC.ecore#//State"/>
+        <attributes xmi:id="_JM1tABnhEeqF_IlBLfqCaw" value="varB">
+          <type href="../DC/model/dC.ecore#//State/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_1nA88BngEeqF_IlBLfqCaw" incoming="_u2jq4BniEeqF_IlBLfqCaw" outgoing="_ZR0XEBniEeqF_IlBLfqCaw">
+        <type href="../DC/model/dC.ecore#//Transition"/>
+        <attributes xmi:id="_EO6acBnhEeqF_IlBLfqCaw" value="param">
+          <type href="../DC/model/dC.ecore#//Transition/event"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_vLLh8BngEeqF_IlBLfqCaw" outgoing="_XNXzEBniEeqF_IlBLfqCaw">
+        <type href="../DC/model/dC.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_mH8xcBnhEeqF_IlBLfqCaw" incoming="_XNXzEBniEeqF_IlBLfqCaw _ZR0XEBniEeqF_IlBLfqCaw _x5zZcBniEeqF_IlBLfqCaw">
+        <type href="../DC/model/dC.ecore#//State"/>
+        <attributes xmi:id="_qlnPkBnhEeqF_IlBLfqCaw" value="varA">
+          <type href="../DC/model/dC.ecore#//State/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_XNXzEBniEeqF_IlBLfqCaw" source="_vLLh8BngEeqF_IlBLfqCaw" target="_mH8xcBnhEeqF_IlBLfqCaw">
+        <type href="../DC/model/dC.ecore#//Transition/source"/>
+      </edges>
+      <edges xmi:id="_ZR0XEBniEeqF_IlBLfqCaw" source="_1nA88BngEeqF_IlBLfqCaw" target="_mH8xcBnhEeqF_IlBLfqCaw">
+        <type href="../DC/model/dC.ecore#//Transition/target"/>
+      </edges>
+      <edges xmi:id="_u2jq4BniEeqF_IlBLfqCaw" source="_rGhZsBngEeqF_IlBLfqCaw" target="_1nA88BngEeqF_IlBLfqCaw">
+        <type href="../DC/model/dC.ecore#//StateMachine/transitions"/>
+      </edges>
+      <edges xmi:id="_x5zZcBniEeqF_IlBLfqCaw" source="_rGhZsBngEeqF_IlBLfqCaw" target="_mH8xcBnhEeqF_IlBLfqCaw">
+        <type href="../DC/model/dC.ecore#//StateMachine/states"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_lWoesBngEeqF_IlBLfqCaw" name="Rhs">
+      <nodes xmi:id="_rGhZsRngEeqF_IlBLfqCaw">
+        <type href="../DC/model/dC.ecore#//StateMachine"/>
+      </nodes>
+      <nodes xmi:id="_yZ3rgBngEeqF_IlBLfqCaw" incoming="_4IoIoBnhEeqF_IlBLfqCaw">
+        <type href="../DC/model/dC.ecore#//State"/>
+        <attributes xmi:id="_JM27IBnhEeqF_IlBLfqCaw" value="varB+varA">
+          <type href="../DC/model/dC.ecore#//State/name"/>
+        </attributes>
+        <attributes xmi:id="_CU_2ABniEeqF_IlBLfqCaw" value="param">
+          <type href="../DC/model/dC.ecore#//State/Inh"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_BsObQBnhEeqF_IlBLfqCaw" outgoing="_4IoIoBnhEeqF_IlBLfqCaw">
+        <type href="../DC/model/dC.ecore#//Transition"/>
+      </nodes>
+      <edges xmi:id="_4IoIoBnhEeqF_IlBLfqCaw" source="_BsObQBnhEeqF_IlBLfqCaw" target="_yZ3rgBngEeqF_IlBLfqCaw">
+        <type href="../DC/model/dC.ecore#//Transition/source"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_rGiAwBngEeqF_IlBLfqCaw" origin="_rGhZsBngEeqF_IlBLfqCaw" image="_rGhZsRngEeqF_IlBLfqCaw"/>
+    <mappings xmi:id="_yZ3rgRngEeqF_IlBLfqCaw" origin="_yZ3EcBngEeqF_IlBLfqCaw" image="_yZ3rgBngEeqF_IlBLfqCaw"/>
+    <mappings xmi:id="_BsObQRnhEeqF_IlBLfqCaw" origin="_vLLh8BngEeqF_IlBLfqCaw" image="_BsObQBnhEeqF_IlBLfqCaw"/>
+  </units>
+</henshin:Module>

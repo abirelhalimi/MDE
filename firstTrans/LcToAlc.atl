@@ -1,0 +1,40 @@
+-- @path MMLC=/DC/model/dC.ecore
+-- @path MMALC=/DC/model/dC.ecore
+
+module LcToAlc;
+create OutAlc : MMALC from InLc : MMLC;
+
+rule ALC {
+	from
+		LC : MMLC!StateMachine
+	to 
+		ALC : MMALC!StateMachine (
+			states <- LC.states,
+			transitions <- LC.transitions
+		)
+}
+
+rule State {
+	from
+		LC : MMLC!State
+	to 
+		ALC : MMALC!State (
+			name <- LC.name,
+			isActive <- LC.isActive,
+			Inh <- LC.Inh,
+			Ord <- LC.Ord,
+			InhIf <- OclUndefined,
+			OrdIf <- OclUndefined
+		)
+}
+
+rule Transition {
+	from
+		LC : MMLC!Transition
+	to 
+		ALC : MMALC!Transition (
+			event <- LC.event,
+			source <- LC.source,
+			target <- LC.target
+		)
+}

@@ -1,0 +1,27 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+Model:
+	statemachine=Statemachine;
+
+Statemachine : 
+	START ((transitions+=Transition)* | state=State) END
+;
+
+
+Transition :
+ source=State Arrow target=State event=STRING ;
+
+ 
+ Arrow : 
+ 	'=>' | '->' | '-->'
+ ;
+ 
+ State : 
+ 	'[*]' | s=ID
+ ;
+ 
+ terminal START: '@startuml';
+ terminal END: '@enduml';
+ 

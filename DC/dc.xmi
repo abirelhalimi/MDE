@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<dC:StateMachine xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dC="http://www.example.org/dC">
+  <transitions event="cond1">
+    <source href="model/trans1.xmi#/1"/>
+    <target href="model/trans1.xmi#/2"/>
+  </transitions>
+  <transitions event="con 2">
+    <source href="model/trans1.xmi#/3"/>
+    <target href="model/trans1.xmi#/4"/>
+  </transitions>
+</dC:StateMachine>

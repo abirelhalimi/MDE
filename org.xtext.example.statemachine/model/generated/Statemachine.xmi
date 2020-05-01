@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<myDsl:Statemachine
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:myDsl="http://www.xtext.org/example/mydsl/MyDsl">
+  <transitions
+      event="cond1">
+    <source
+        s=" sss"/>
+    <target
+        s="fghfgh"/>
+  </transitions>
+  <transitions
+      event="con 2">
+    <source
+        s="fghfgh"/>
+    <target
+        s="hhhh"/>
+  </transitions>
+</myDsl:Statemachine>

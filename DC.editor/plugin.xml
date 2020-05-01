@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dC -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="dC.presentation.DCModelWizardID"
+            name="%_UI_DCModelWizard_label"
+            class="dC.presentation.DCModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DCModelFile.gif">
+         <description>%_UI_DCModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dC -->
+      <editor
+            id="dC.presentation.DCEditorID"
+            name="%_UI_DCEditor_label"
+            icon="icons/full/obj16/DCModelFile.gif"
+            extensions="dc"
+            class="dC.presentation.DCEditor"
+            contributorClass="dC.presentation.DCActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,38 @@
+-- @path MMDCLC=/DC/model/dC.ecore
+-- @path MMStateMachine=/org.xtext.example.statemachine/model/generated/MyDsl.ecore
+
+module StateToLc;
+create OUT : MMDCLC from IN : MMStateMachine;
+
+
+rule LC {
+	from
+		SM : MMStateMachine!Statemachine
+	to 
+		LC : MMDCLC!StateMachine (
+			transitions <- SM.transitions,
+			states <- SM.state
+		)
+}
+
+rule State {
+	from
+		SM : MMStateMachine!State
+	to 
+		LC : MMDCLC!State (
+			name <- SM.s,
+			isActive <- false
+		)
+}
+
+rule Transition {
+	from
+		SM : MMStateMachine!Transition
+	to 
+		LC : MMDCLC!Transition (
+			source <- SM.source,
+			target <- SM.target,
+			event <- SM.event
+		)
+}
+

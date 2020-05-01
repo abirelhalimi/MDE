@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dC="http://www.example.org/dC">
+  <dC:StateMachine>
+    <transitions event="cond1" source="/1" target="/2"/>
+    <transitions event="con 2" source="/3" target="/4"/>
+  </dC:StateMachine>
+  <dC:State name=" sss"/>
+  <dC:State name="fghfgh"/>
+  <dC:State name="fghfgh"/>
+  <dC:State name="hhhh"/>
+</xmi:XMI>

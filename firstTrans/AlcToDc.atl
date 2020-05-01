@@ -1,0 +1,41 @@
+-- @path ALC=/DC/model/dC.ecore
+-- @path GC=/org.xtext.example.gc/model/generated/Gc.ecore
+-- @path DC=/DC/model/dC.ecore
+
+module AlcToDc;
+create OUT : DC from IN : ALC, IN1 : GC;
+
+rule Statemachine {
+	from
+		ALC : ALC!StateMachine
+	to 
+		DC : DC!StateMachine (
+			states <- ALC.states,
+			transitions <- ALC.transitions
+		)
+}
+
+rule State {
+	from
+		ALC : ALC!State,
+		GC : GC!Condition
+	to 
+		DC : DC!State (
+			name <- ALC.name,
+			isActive <- ALC.isActive,
+			Ord <- ALC.Ord,
+			Inh <- ALC.Inh
+			
+			
+		)
+}
+rule Transition {
+	from
+		ALC : ALC!Transition
+	to 
+		DC : DC!Transition (
+			event <- ALC.event,
+			source <- ALC.source,
+			target <- ALC.target
+		)
+}
